@@ -35,5 +35,9 @@ PixelPainterStore.update(s => {s.canvas[y][x] = s.Color})
 }
 
 export const Clear = () =>{
-  
+  PixelPainterStore.update(
+    s => {
+      s.canvas = createEmptyCanvas()
+    }
+  )
 }
