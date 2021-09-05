@@ -41,3 +41,29 @@ export const Clear = () =>{
     }
   )
 }
+
+export const Random = () =>{
+  const RanColor: string[] = []
+  RanColor[0] = '#000000'
+  RanColor[1] = '#804000'
+  RanColor[2] = '#FE0000'
+  RanColor[3] = '#FE6A00'
+  RanColor[4] = '#FFD800'
+  RanColor[5] = '#00FF01'
+  RanColor[6] = '#FFFFFF'
+  RanColor[7] = '#01FFFF'
+  RanColor[8] = '#0094FE'
+  RanColor[9] = '#0026FF'
+  RanColor[10] = '#B100FE'
+  RanColor[11] = '#FF006E'
+
+  PixelPainterStore.update(
+    s => {
+      for (let i=0; i<16; i++){
+        for (let j=0; j<16; j++){
+          s.canvas[i][j] = RanColor[Math.floor(Math.random() * 12)]
+        }
+      }
+    }
+  )
+}
