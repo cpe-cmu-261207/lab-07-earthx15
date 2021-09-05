@@ -28,3 +28,12 @@ export const setColor = (color:string) => {
     s => {s.Color = color}
   )
 }
+
+export const PaintCell = (x:number,y:number) =>{
+PixelPainterStore.update(s => {s.canvas[y][x] = s.Color})
+
+}
+
+export const Clear = () =>{
+  
+}
